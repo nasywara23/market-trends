@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis: Transformasi Tren Pasar & Perilaku Konsumen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            padding: 60px 120px;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 5vh;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: -25px;
+            width: 20px;
+            height: 20px;
+            background-color: #3357FF;
+            border-radius: 50%;
+            border: 4px solid #f8f9fa;
+            z-index: 1;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 24px;
+            left: -16px;
+            width: 2px;
+            height: 100%;
+            background-color: #e5e7eb;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white p-8 text-center top-0 shadow-md">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#3357FF] to-[#33A1FF] text-transparent bg-clip-text">Transformasi Lanskap Digital</h1>
+        <p class="mt-4 text-lg max-w-3xl mx-auto text-slate-500">Sebuah tinjauan visual tentang bagaimana teknologi membentuk kembali perilaku konsumen, strategi pemasaran, dan masa depan dunia kerja.</p>
+        <div class="mt-6 flex justify-center items-center gap-4">
+            <a href="#" class="inline-flex items-center bg-[#3357FF] text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">
+                <i class="fa-solid fa-file-pdf mr-2"></i>
+                Unduh PDF (Indonesia)
+            </a>
+            <a href="#" class="inline-flex items-center bg-slate-700 text-white font-bold py-2 px-4 rounded-lg shadow-md hover:bg-slate-800 transition-colors duration-300">
+                <i class="fa-solid fa-file-pdf mr-2"></i>
+                Download PDF (English)
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <section id="sharing-economy" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-800">Era Baru Akses: Dari Kepemilikan ke Ekonomi Berbagi</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 text-slate-500">Masyarakat modern lebih menghargai akses daripada kepemilikan. Model ekonomi berbagi, yang didukung oleh platform digital, mengutamakan efisiensi, fleksibilitas, dan pengalaman.</p>
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="aspect-video rounded-xl shadow-lg overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/kmvsjkGqaoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <div class="mb-4 text-3xl text-[#3357FF]"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Efisiensi Biaya</h3>
+                    <p>Mengurangi belanja modal (CAPEX) besar dengan beralih ke biaya operasional (OPEX) yang fleksibel, membebaskan dana untuk pertumbuhan.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <div class="mb-4 text-3xl text-[#33FF57]"><i class="fa-solid fa-arrows-spin"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Optimalisasi Aset</h3>
+                    <p>Memanfaatkan aset yang menganggur untuk menciptakan pendapatan baru dan mengurangi jejak karbon dengan pemakaian sumber daya bersama.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:col-span-2 lg:col-span-1 text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                    <div class="mb-4 text-3xl text-[#FF5733]"><i class="fa-solid fa-expand"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-slate-800">Fleksibilitas & Skalabilitas</h3>
+                    <p>Bisnis dapat dengan cepat menyesuaikan skala operasi sesuai permintaan pasar tanpa terikat pada aset fisik jangka panjang.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-6 mt-8">
+                <h3 class="text-2xl font-bold text-center mb-4 text-slate-800">Preferensi Generasi Baru: Pengalaman di Atas Kepemilikan</h3>
+                <p class="text-center max-w-2xl mx-auto mb-4 text-slate-500">Data menunjukkan pergeseran yang jelas di kalangan konsumen muda yang lebih memilih untuk berinvestasi dalam pengalaman daripada membeli barang fisik.</p>
+                <div class="chart-container h-64 md:h-80">
+                    <canvas id="experienceDoughnutChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing-evolution" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-800">Evolusi Pemasaran: Pergeseran Kekuatan ke Konsumen</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 text-slate-500">Dari fokus pada produk, pemasaran telah berevolusi menjadi pendekatan yang berpusat pada manusia, nilai, dan teknologi untuk membangun hubungan otentik.</p>
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="aspect-video rounded-xl shadow-lg overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/p-bwxjbPi0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="timeline-line hidden sm:block"></div>
+                <div class="space-y-16">
+                    <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-industry text-2xl text-[#FF5733]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#FF5733]">Marketing 1.0: Product-Centric</h3>
+                        <p class="mt-2 text-slate-500">Fokus pada produksi massal dan keunggulan fungsional produk. Komunikasi satu arah.</p>
+                    </div>
+                    <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-user-check text-2xl text-[#FFC300]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#FFC300]">Marketing 2.0: Customer-Centric</h3>
+                        <p class="mt-2 text-slate-500">Fokus bergeser pada pemenuhan kebutuhan dan kepuasan pelanggan. Konsep STP (Segmenting, Targeting, Positioning) menjadi standar.</p>
+                    </div>
+                    <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-users text-2xl text-[#FF33A1]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#FF33A1]">Marketing 3.0: Human-Centric</h3>
+                        <p class="mt-2 text-slate-500">Memandang konsumen sebagai manusia utuh dengan nilai dan spiritualitas. Merek harus punya tujuan.</p>
+                    </div>
+                    <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-mobile-screen-button text-2xl text-[#33FFB5]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#33FFB5]">Marketing 4.0: Traditional to Digital</h3>
+                        <p class="mt-2 text-slate-500">Mengintegrasikan interaksi online dan offline untuk menciptakan pengalaman pelanggan yang mulus (omnichannel).</p>
+                    </div>
+                    <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-microchip text-2xl text-[#33FF57]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#33FF57]">Marketing 5.0: Technology for Humanity</h3>
+                        <p class="mt-2 text-slate-500">Menggunakan AI dan Big Data untuk personalisasi massal dan meningkatkan pengalaman manusia.</p>
+                    </div>
+                     <div class="relative sm:pl-12 timeline-item">
+                        <div class="absolute left-[-55px] top-1 h-12 w-12 bg-white rounded-full flex items-center justify-center hidden sm:flex"><i class="fa-solid fa-vr-cardboard text-2xl text-[#3357FF]"></i></div>
+                        <h3 class="text-2xl font-bold text-[#3357FF]">Marketing 6.0: Immersive / Metaverse</h3>
+                        <p class="mt-2 text-slate-500">Menciptakan pengalaman digital yang mendalam di dunia virtual menggunakan AR/VR.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="global-workforce" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-800">Society 5.0: Runtuhnya Batas & Lahirnya Tenaga Kerja Global</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 text-slate-500">Teknologi kolaborasi digital memungkinkan kerja jarak jauh, menghubungkan permintaan tenaga kerja di negara maju dengan pasokan talenta di negara berkembang.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-slate-800">Kebutuhan vs Ketersediaan Talenta Global</h3>
+                    <p class="text-center max-w-2xl mx-auto mb-4 text-slate-500">Negara maju menghadapi kekurangan tenaga kerja, sementara negara berkembang memiliki bonus demografi. Ini menciptakan simbiosis di pasar kerja global.</p>
+                     <div class="chart-container h-80 md:h-96">
+                        <canvas id="talentBarChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                     <h3 class="text-2xl font-bold text-center mb-4 text-slate-800">Teknologi Pendukung Kerja Jarak Jauh</h3>
+                     <p class="text-center max-w-2xl mx-auto mb-6 text-slate-500">Platform digital adalah tulang punggung yang memungkinkan kolaborasi tim lintas negara secara efektif.</p>
+                     <div class="space-y-4">
+                        <div class="flex items-center bg-slate-100 rounded-lg p-4">
+                            <i class="fa-solid fa-video w-12 text-center text-xl text-[#3357FF]"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Konferensi Video</h4>
+                                <p class="text-sm text-slate-500">Zoom, Google Meet, Microsoft Teams</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-100 rounded-lg p-4">
+                            <i class="fa-solid fa-tasks w-12 text-center text-xl text-[#33FF57]"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Manajemen Proyek</h4>
+                                <p class="text-sm text-slate-500">Asana, Trello, Jira</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-100 rounded-lg p-4">
+                            <i class="fa-solid fa-comments w-12 text-center text-xl text-[#FF33A1]"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Komunikasi Tim</h4>
+                                <p class="text-sm text-slate-500">Slack, Discord</p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="language-skills" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-slate-800">Kunci Pembuka Peluang: Urgensi Bahasa Internasional</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 text-slate-500">Di pasar kerja global, kemahiran berbahasa Inggris bukan lagi nilai tambah, melainkan kualifikasi fundamental untuk mengakses pengetahuan, kolaborasi, dan karier terbaik.</p>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-2xl font-bold text-center mb-4 text-slate-800">Dampak Kemahiran Bahasa pada Pertumbuhan Karier</h3>
+                <p class="text-center max-w-2xl mx-auto mb-4 text-slate-500">Kemampuan berbahasa internasional secara signifikan meningkatkan potensi seorang profesional di berbagai aspek penting dalam pengembangan karier mereka.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="languageRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="p-8 text-center border-t border-slate-200 mt-12">
+        <p class="text-slate-400 mb-8 max-w-3xl mx-auto">Ketiga tren ini saling terkait dan didorong oleh teknologi digital, menuntut adaptasi cepat dari individu dan organisasi untuk tetap relevan di era baru.</p>
+        <div class="mt-8">
+            <h4 class="font-bold text-slate-700">Disusun oleh:</h4>
+            <p class="text-xl font-bold text-[#3357FF] mt-2">Nasywa Raihani Azizah</p>
+            <p class="text-slate-500">Creative Strategist | Founder of Grovio</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="https://nasywara.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#3357FF] transition-colors duration-300 flex items-center gap-2">
+                    <i class="fa-solid fa-globe"></i> Website
+                </a>
+                <a href="https://www.instagram.com/grovioid/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#3357FF] transition-colors duration-300 flex items-center gap-2">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+        
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: 'Inter',
+                            size: 14,
+                        },
+                        color: '#333333'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#1e293b',
+                    titleColor: '#ffffff',
+                    bodyColor: '#cbd5e1',
+                    bodyFont: {
+                        family: 'Inter'
+                    },
+                    titleFont: {
+                        family: 'Inter',
+                        weight: 'bold'
+                    },
+                    padding: 12,
+                    cornerRadius: 8,
+                    displayColors: false
+                }
+            }
+        };
+
+        const doughnutCtx = document.getElementById('experienceDoughnutChart').getContext('2d');
+        new Chart(doughnutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Lebih Memilih Pengalaman', 'Lebih Memilih Kepemilikan Barang'],
+                datasets: [{
+                    label: 'Preferensi Konsumen',
+                    data: [78, 22],
+                    backgroundColor: ['#3357FF', '#FF5733'],
+                    borderColor: '#f8f9fa',
+                    borderWidth: 5,
+                    hoverOffset: 10
+                }]
+            },
+            options: { ...sharedChartOptions }
+        });
+
+        const barCtx = document.getElementById('talentBarChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Negara Maju (Contoh: Jepang, Jerman)', 'Negara Berkembang (Contoh: Indonesia, Vietnam)'],
+                datasets: [{
+                    label: 'Permintaan Tenaga Kerja (Indeks)',
+                    data: [85, 30],
+                    backgroundColor: '#FF33A1',
+                    borderColor: '#FF33A1',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }, {
+                    label: 'Ketersediaan Talenta (Indeks)',
+                    data: [40, 90],
+                    backgroundColor: '#33FF57',
+                    borderColor: '#33FF57',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                ...sharedChartOptions,
+                indexAxis: 'y',
+                 scales: {
+                    x: {
+                        border: { display: false },
+                        grid: {
+                            display: true,
+                            color: '#e2e8f0'
+                        },
+                        ticks: { color: '#64748b' }
+                    },
+                    y: {
+                         border: { display: false },
+                        grid: {
+                            display: false
+                        },
+                        ticks: { 
+                            color: '#334155',
+                            font: {
+                                weight: 'bold'
+                            },
+                            callback: function(value) {
+                                let label = this.getLabelForValue(value);
+                                return wrapLabel(label, 20);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const radarCtx = document.getElementById('languageRadarChart').getContext('2d');
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Peluang Global', 'Kolaborasi Tim', 'Akses Pengetahuan', 'Potensi Gaji', 'Pertumbuhan Karier'],
+                datasets: [{
+                    label: 'Dampak Kemahiran Bahasa Inggris',
+                    data: [95, 85, 90, 75, 88],
+                    fill: true,
+                    backgroundColor: 'rgba(51, 87, 255, 0.2)',
+                    borderColor: '#3357FF',
+                    pointBackgroundColor: '#3357FF',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3357FF'
+                }]
+            },
+            options: {
+                ...sharedChartOptions,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#e2e8f0'
+                        },
+                        grid: {
+                            color: '#e2e8f0'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 14,
+                                family: 'Inter',
+                                weight: 'bold'
+                            },
+                            color: '#1e293b'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(0,0,0,0)',
+                            color: '#64748b',
+                            stepSize: 20
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
