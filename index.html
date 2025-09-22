@@ -34,6 +34,11 @@
             body {
                 padding: 5vh;
             }
+            /* Memastikan teks dalam kontainer utama bisa wrap di mobile */
+            header p, main {
+                word-wrap: break-word; /* Fallback untuk browser lama */
+                overflow-wrap: break-word;
+            }
         }
         .timeline-item::before {
             content: '';
